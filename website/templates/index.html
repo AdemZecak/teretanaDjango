@@ -291,10 +291,18 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="bs-text">
-                        <h2>REGISTRUJTE SE</h2>
+                        
+                        
+
+                        {% if user.is_authenticated %}
+                        <div class = "hello_user"> <h2>DOBRODOŠLI, {{user.first_name}} !</h2> </div>
+                        <a href = "accounts/logout" class = "primary-btn  btn-normal">Odjavite se</a>
+                        {% else %}
                         <div class="bt-tips">Zdravlje i dobar izgled uvijek na prvom mjestu.</div>
-                        <a href="#" class="primary-btn  btn-normal">Logirajte se</a>
+                        <h2>REGISTRUJTE SE</h2>
+                        <a href="accounts/login" class="primary-btn  btn-normal">Prijavite se</a>
                         <a href="accounts/register" class="primary-btn  btn-normal">Registrujte se</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
