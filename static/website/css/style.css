@@ -32,6 +32,14 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+@import url(barfiller.css);
+@import url(bootstrap.min.css);
+@import url(flaticon.css);
+@import url(font-awesome.min.css);
+@import url(magnific-popup.css);
+@import url(owl.carousel.min.css);
+@import url(slicknav.min.css);
+
 html,
 body {
 	height: 100%;
@@ -737,7 +745,7 @@ ol {
 	color: #c4c4c4;
 	font-weight: 700;
 	text-transform: uppercase;
-	margin-bottom: 45px;
+	margin-bottom: 25px;
 }
 
 .bs-text .primary-btn {
@@ -2494,7 +2502,7 @@ ol {
 	padding-left: 20px;
 	padding-right: 5px;
 	background: transparent;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .leave-comment form input::-webkit-input-placeholder {
@@ -3255,3 +3263,29 @@ ol {
 		font-size: 28px;
 	}
 }
+
+
+
+
+
+/*---------------------
+  Login sekcija
+-----------------------*/
+
+.bs-text .prijava {
+	padding-bottom:30px;
+}
+
+
+.message {
+	padding-top:40px;
+	color: white;
+}
+
+.message-register {
+	
+	color: white;
+	padding-top:10px;
+}
+
+
