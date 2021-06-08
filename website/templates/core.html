@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static 'website/img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2 >TRBUŠNI ZID</h2>
+                        <div class="bt-option">
+                            
+                            <a href="{% url 'prvi_program' %}">PRVI PROGRAM</a>
+                            <a href="{% url 'drugi_program' %}">DRUGI PROGRAM</a>
+                            <a href="{% url 'treci_program' %}">TREĆI PROGRAM</a>
+                            <a href="{% url 'cetvrti_program' %}">ČETVRTI PROGRAM</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Class Timetable Section Begin -->
+    <section class="class-timetable-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <br>
+                        <br>
+                        <br>
+                        <span>Trbušni zid</span>
+                        <br>
+                        <h2>Informacije o treningu</h2>
+                        
+                        
+                        <br>
+                        <br>
+                        <p>Ovaj trening sastoji se od četiri ravnomjerno raspoređena programa.</p>
+                        <p>Cilj treninga: Pojačati snagu trbušnog zida. 
+                            <br>
+                            Trajanje treninga: 4 sedmice.
+                            <br> 
+                            Trajanje jednog treninga: sa uvodnim dijelom oko 35 minuta.
+                            </p>
+                        
+                        <p>Cilj je odraditi trening u kontinuitetu sa jednim slobodnim danom. Budite posebno oprezni i svakako slušajte svoje tijelo.
+                            Ako osjetite bol ili osjećate umor u trbušnom zidu, uzmite slobodan dan.
+                            Ovaj program se radi sa progresijom, tako da se vježbe i propisana ponavljanja malo razlikuju iz sedmice u sedmicu.</p>
+
+
+                        <br>
+                        <br>
+                    
+                      
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- UTORAK -->
+
+
+
+    
+
+
+
+{% endblock %}

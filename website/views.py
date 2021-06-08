@@ -25,3 +25,31 @@ def bmi(request):
 
 
 
+def core(request):
+    return render(request, 'core.html',{})
+
+def prvi(request):
+    return render(request, 'core-program/prvi_program.html')
+
+def drugi(request):
+    return render(request, 'core-program/drugi_program.html')
+
+def treci(request):
+    return render(request, 'core-program/treci_program.html')
+
+def cetvrti(request):
+    return render(request, 'core-program/cetvrti_program.html')
+
+
+
+def mass(request):
+    return render(request, 'mass_gain.html')
+
+def prvi_mass(request):
+    return render(request, 'mass-gain/prvi_program_mass.html')
+
+def drugi_mass(request):
+    return render(request, 'mass-gain/drugi_program_mass.html')
+
+
+
