@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static 'website/img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2 >MIŠIĆNA DEFINICIJA</h2>
+                        <div class="bt-option">
+                            
+                            <a href="{% url 'prvi_program_definicija' %}">PRVI PROGRAM</a>
+                            <a href="{% url 'drugi_program_definicija' %}">DRUGI PROGRAM</a>
+                            <a href="{% url 'treci_program_definicija' %}">TREĆI PROGRAM</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Class Timetable Section Begin -->
+    <section class="class-timetable-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <br>
+                        <br>
+                        <span>MIŠIĆNA DEFINICIJA</span>
+                        <br>
+                        <h2>Informacije o treningu</h2>
+                        
+                        
+                        <br>
+                        <br>
+                        <p>Cilj treninga: Mišićna definicija, topljenje potkožnog masnog tkiva.</p>
+                        <p>Oblik rada: Stanični.</p>
+                        <p>Trajanje treninga: s uvodnim dijelom oko 75 minuta.</p>
+                        <p>Odmor: Između serija 45-60 sekundi a između vježbi 2-3 minute.</p>
+                        <p>Prehrana: Preporuka dnevnog unosa proteina je 2 gr/kg tjelesne težine. Unos ugljikohidrata je oko 2.5 gr/kg tjelesne težine. Dnevni unos tekućine minimalno 2 litre.</p>
+                        <p>Suplementacija: Najčešće preporuke za suplementaciju su 'Whey' protein nakon treninga, glutamin, BCAA, te L-carnitine, međutim, kako
+                            su potrebe za dodacima prehrani individualne, savjetujemo da se o načinu uzimanja, količini i vrsti preparata savjetujete sa vašim individualnim trenerom koji će suplementaciju prilagoditi vašim potrebama i mogućnostima.</p>
+
+                        <p>Napomena: Prikazana su tri programa koji slijede jedan drugog i čine jedan ciklus. Svaki od programa provodi se po dvije sedmice a to znači da ciklus traje ukupno 6 sedmica, nakon čega slijedi testiranje i nadopuna programa. Program je namijenjen iskusnijim vježbačima i primjenjuje se nakon provedenog ciklusa treninga za razvoj mišićne mase.</p>
+
+                        <p>Aerobni trening: Služi za topljenje potkožnog masnog tkiva, adaptaciju organizma na aerobni rad, te poboljšanje kardiovaskularnih i respiratornih sposobnosti. Aerobni trening provodi se u frekvenciji od 60-75%. Aerobni trening provodi se u fitness centru na kardio spravama ili vani, te je poželjno korištenje pulsmetra. Također možete koristiti metodu mjerenja pulsa u 15 sekundi koji ćete zatim pomnožiti sa 4.</p>
+
+
+
+                        <br>
+                        <br>
+                    
+                      
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+
+
+
+    
+
+
+
+{% endblock %}

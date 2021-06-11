@@ -3302,3 +3302,10 @@ ol {
   Za izbor programa
 -----------------------*/
 
+.class-timetable table tbody tr td.class-time-trening {
+	font-size: 14px;
+	color: #f36100;
+	background: #000000;
+	border: 1px solid #363636;
+}
+
