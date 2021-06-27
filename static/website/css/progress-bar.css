@@ -1,0 +1,329 @@
+
+
+
+/*---------------------
+PROGRESS BAR
+-----------------------*/
+/*
+body,
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: rgb(228, 228, 115);
+}
+*/
+
+
+
+
+.progress-bar {
+  position:sticky;
+  width: 280%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-680px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+
+
+
+}
+
+.progress-bar .progress {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+  
+ 
+}
+
+/*------------------------
+  CORE PROGRESS BAR ČETVRTI PROGRAM
+-------------------------*/
+
+.progress-bar-četvrti-core {
+
+
+    position:sticky;
+    width: 300%;
+    height: 20px;
+    margin: -25px auto;
+    margin-left:-800px;
+    margin-right:0px;
+    background: #fdfc98;
+    border-radius: 10px;
+    overflow: hidden;
+  
+    -webkit-transform: rotate(-270deg);
+    transform: rotate(-270deg);
+
+}
+
+.progress-bar-četvrti-core .progress {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+}
+
+
+/*------------------------
+  MASS GAIN PROGRESS BAR DRUGI PROGRAM
+-------------------------*/
+
+
+.progress-bar-mass-gain {
+
+  position:absolute;
+  width: 350%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-1130px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top:-180px;
+
+  
+  
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+  
+}
+
+.progress-bar-mass-gain .progress {
+
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+
+}
+
+
+
+
+
+/*------------------------
+  DEFINICIJA PROGRESS BAR PRVI PROGRAM
+-------------------------*/
+
+.progress-bar-definicija {
+
+  position:absolute;
+  width: 320%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-960px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top:340px;
+
+  
+  
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+  
+}
+
+.progress-bar-definicija .progress {
+
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+
+}
+
+
+
+/*------------------------
+  DEFINICIJA PROGRESS BAR DRUGI PROGRAM
+-------------------------*/
+
+
+.progress-bar-definicija-program-drugi {
+  position:absolute;
+  width: 320%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-960px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top:580px;
+
+  
+  
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+}
+
+
+.progress-bar-definicija-program-drugi .progress {
+
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+}
+
+
+
+
+
+
+/*------------------------
+  DEFINICIJA PROGRESS BAR TRECI PROGRAM
+-------------------------*/
+
+.progress-bar-definicija-program-treci {
+  position:absolute;
+  width: 380%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-1340px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top:1100px;
+
+  
+  
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+}
+
+
+.progress-bar-definicija-program-treci .progress {
+
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+}
+
+
+/*------------------------
+  DEFINICIJA PROGRESS BAR DRUGI PROGRAM
+-------------------------*/
+
+.progress-bar-snaga {
+  position:absolute;
+  width: 290%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-740px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top:660px;
+
+  
+  
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+}
+
+.progress-bar-snaga .progress {
+
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+}
+
+/*------------------------
+  YOGA PROGRESS BAR
+-------------------------*/
+
+.progress-bar-yoga {
+
+  position:absolute;
+  width: 180%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-120px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top:1260px;
+
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+
+}
+
+
+.progress-bar-yoga .progress {
+
+
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+
+}

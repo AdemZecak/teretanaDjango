@@ -34,6 +34,14 @@
     <link rel="stylesheet" href="{% static 'website/css/magnific-popup.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'website/css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'website/css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'website/css/progress-bar.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'website/css/checkbox.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'website/css/play-btn.css' %}" type="text/css">
+
+    
+
+
+  
  
  
 </head>
@@ -55,27 +63,27 @@
         </div>
         <nav class="canvas-menu mobile-menu">
             <ul>
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="{% url 'about-us' %} ">About Us</a></li>
-                <li><a href="{% url 'services' %} ">Services</a></li>
+                <li><a href="{% url 'index' %}">Naslovna</a></li>
+                <li><a href="{% url 'about-us' %} ">O nama</a></li>
+                <li><a href="{% url 'services' %} ">Usluge</a></li>
                 <li><a href="{% url 'blog' %} ">Blog</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="dropdown">
-                        <li><a href="{% url 'about-us' %} ">About us</a></li>
-                        <li><a href="{% url 'bmi-calculator' %} ">Bmi calculate</a></li>
-                        <li><a href="{% url 'blog' %} ">Our blog</a></li>
+                        <li><a href="{% url 'about-us' %} ">O nama</a></li>
+                        <li><a href="{% url 'bmi-calculator' %} ">Bmi kalkulator</a></li>
+                        <li><a href="{% url 'blog' %} ">Naš blog</a></li>
                  
                     </ul>
                 </li>
-                <li><a href="{% url 'contact' %} ">Contact</a></li>
+                <li><a href="{% url 'contact' %} ">Kontakt</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
-            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.youtube.com/watch?v=FO3aglziCxE"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/watch?v=FO3aglziCxE" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
         </div>
     </div>
     <!-- Offcanvas Menu Section End -->
@@ -95,18 +103,18 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li class= " active_nav {% if request.path == index %} active {% endif %}"><a href=" {% url 'index' %} ">Home</a></li>
-                            <li class="active_nav {% if request.path == about %} active {% endif %}"><a href="{% url 'about-us' %}">About Us</a></li>
-                            <li class=" active_nav {% if request.path == services %} active {% endif %}"><a href="{% url 'services' %}">Services</a></li>
+                            <li class= " active_nav {% if request.path == index %} active {% endif %}"><a href=" {% url 'index' %} ">Naslovna</a></li>
+                            <li class="active_nav {% if request.path == about %} active {% endif %}"><a href="{% url 'about-us' %}">O nama</a></li>
+                            <li class=" active_nav {% if request.path == services %} active {% endif %}"><a href="{% url 'services' %}">Usluge</a></li>
                             <li class="active_nav {% if request.path == blog %} active {% endif %}"><a href="{% url 'blog' %}">Blog</a></li>
-                            <li><a href="#">Pages</a>
+                            <li><a href="#">Stranice</a>
                                 <ul class="dropdown">
-                                    <li><a href="{% url 'about-us' %}">About us</a></li>                               
-                                    <li><a href="{% url 'bmi-calculator' %}">Bmi calculate</a></li>
+                                    <li><a href="{% url 'about-us' %}">O nama</a></li>                               
+                                    <li><a href="{% url 'bmi-calculator' %}">Bmi kalkulator</a></li>
                                     <li><a href="{% url 'blog' %}">Blog</a></li>
                                 </ul>
                             </li>
-                            <li class = "active_nav {% if request.path == contact %} active {% endif %}"><a href="{% url 'contact' %}">Contact</a></li>
+                            <li class = "active_nav {% if request.path == contact %} active {% endif %}"><a href="{% url 'contact' %}">Kontakt</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -116,10 +124,10 @@
                             <i class="fa fa-search"></i>
                         </div>
                         <div class="to-social">
-                            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/watch?v=FO3aglziCxE"><i class="fa fa-youtube-play"></i></a>
-                            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/watch?v=FO3aglziCxE" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -184,11 +192,11 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore dolore magna aliqua endisse ultrices gravida lorem.</p>
                     <div class="fa-social">
-                        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                        <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/watch?v=FO3aglziCxE"><i class="fa fa-youtube-play"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                        <a href="https://accounts.google.com/"><i class="fa  fa-envelope-o"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/watch?v=FO3aglziCxE" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://accounts.google.com/" target="_blank"><i class="fa  fa-envelope-o"></i></a>
                     </div>
                 </div>
             </div>
@@ -267,6 +275,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{% static 'website/js/jquery.slicknav.js' %}"></script>
 <script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
 <script src="{% static 'website/js/main.js' %}"></script>
+<script src="{% static 'website/js/progress-bar.js' %}"></script>
+
 
 
 

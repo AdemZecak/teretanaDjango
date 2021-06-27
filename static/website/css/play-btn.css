@@ -1,0 +1,55 @@
+button {
+    background:none;
+    color: #ccc;
+    width:100px;
+    height: 40px;
+    border:1px solid #338033;
+    font-size:18px;
+    border-radius:4px;
+    transition:.6s;
+    overflow:hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+button:hover {
+    background:#338033;
+    cursor:pointer;
+
+}
+
+button:hover::before {
+
+    opacity: .6;
+    transition: .2s;
+
+}
+
+
+button:hover::after {
+ 
+    opacity: .1;
+    transition: .2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

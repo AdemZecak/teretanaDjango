@@ -1,0 +1,70 @@
+
+/*---------------------
+CHECKBOX
+-----------------------*/
+
+
+
+
+/* Class tasks */
+
+
+
+.tasks {
+  display: flex;
+  margin-top: 20px;
+ 
+}
+.tasks input[type=checkbox] {
+  display: none;
+}
+.tasks .checkbox {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:80px;
+  height: 40px;
+  width: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+
+
+.tasks .checkbox:last-of-type {
+  margin-right: 0;
+}
+.tasks .checkbox:hover {
+  background-color: #fc9b0a;
+}
+.tasks .checkbox .checkmark {
+  display: block;
+  overflow: hidden;
+  background: url("https://static.vecteezy.com/system/resources/previews/001/200/261/non_2x/check-png.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-size: 890px;
+  background-position: center 63%;
+  background-position: right 63% ;
+  transition: all 250ms ease-in-out;
+  
+ 
+}
+
+
+
+.checkbox input:checked ~ .checkmark {
+  background-size: 30px;
+  background-color:#fdfc98;
+
+}
+
+
+ 

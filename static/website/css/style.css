@@ -39,6 +39,7 @@
 @import url(magnific-popup.css);
 @import url(owl.carousel.min.css);
 @import url(slicknav.min.css);
+@import url(progress-bar.css);
 
 
 
@@ -1512,9 +1513,10 @@ ol {
   Class Timetable Section
 -----------------------*/
 
+
 .class-timetable-section {
 	background: #151515;
-	padding: 30px 0px 10px 0px;
+	padding: 40px 0px 10px 10px;
 }
 
 .class-timetable-section.class-details-timetable {
@@ -3302,10 +3304,63 @@ ol {
   Za izbor programa
 -----------------------*/
 
-.class-timetable table tbody tr td.class-time-trening {
-	font-size: 14px;
-	color: #f36100;
-	background: #000000;
-	border: 1px solid #363636;
+.breadcrumb-text .bt-option a.active_nav {
+	color:white;
+	
 }
+
+
+.breadcrumb-text .bt-option a.active_nav>a {
+	color: #f36100;
+}
+
+.breadcrumb-text .bt-option a.active_nav>a:after {
+	opacity: 1;
+}
+
+.breadcrumb-text .bt-option a:hover {
+	color: #f36100;
+}
+
+.breadcrumb-text .bt-option a:hover>a:after {
+	opacity: 1;
+}
+
+
+/*---------------------
+Trenutni programi
+-----------------------*/
+
+
+.class-item .ci-text  a {
+	color:white;
+	
+}
+
+
+.class-item .ci-text  a>a {
+	color: #f36100;
+}
+
+.class-item .ci-text  a>a:after {
+	opacity: 1;
+}
+
+.class-item .ci-text a:hover {
+	color: #f36100;
+}
+
+.class-item .ci-text a:hover>a:after {
+	opacity: 1;
+}
+
+
+
+/*---------------------
+Za aerobni trening
+-----------------------*/
+
+
+
+
 
