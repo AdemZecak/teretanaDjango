@@ -60,10 +60,10 @@ html {
 
 
     position:sticky;
-    width: 300%;
+    width: 280%;
     height: 20px;
     margin: -25px auto;
-    margin-left:-800px;
+    margin-left:-700px;
     margin-right:0px;
     background: #fdfc98;
     border-radius: 10px;
@@ -95,10 +95,10 @@ html {
 .progress-bar-mass-gain {
 
   position:absolute;
-  width: 350%;
+  width: 340%;
   height: 20px;
   margin: -25px auto;
-  margin-left:-1130px;
+  margin-left:-1060px;
   margin-right:0px;
   background: #fdfc98;
   border-radius: 10px;
@@ -129,6 +129,47 @@ html {
 
 
 
+/*------------------------
+  MASS GAIN PROGRESS BAR PRVI PROGRAM
+-------------------------*/
+
+
+.progress-bar-mass-gain_prvi {
+
+  position:absolute;
+  width: 260%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-560px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 150px;
+
+  
+  
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+  
+}
+
+.progress-bar-mass-gain_prvi .progress {
+
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+
+}
+
+
 
 
 /*------------------------
@@ -138,10 +179,10 @@ html {
 .progress-bar-definicija {
 
   position:absolute;
-  width: 320%;
+  width: 300%;
   height: 20px;
   margin: -25px auto;
-  margin-left:-960px;
+  margin-left:-820px;
   margin-right:0px;
   background: #fdfc98;
   border-radius: 10px;
@@ -165,7 +206,7 @@ html {
   top: 0;
   left: 0;
   width: 0%;
-  height: 25px;
+  height: 20px;
   transition: width 250ms ease-in-out;
 
 }
@@ -179,15 +220,15 @@ html {
 
 .progress-bar-definicija-program-drugi {
   position:absolute;
-  width: 320%;
+  width: 310%;
   height: 20px;
   margin: -25px auto;
-  margin-left:-960px;
+  margin-left:-860px;
   margin-right:0px;
   background: #fdfc98;
   border-radius: 10px;
   overflow: hidden;
-  margin-top:580px;
+  margin-top:670px;
 
   
   
@@ -221,15 +262,15 @@ html {
 
 .progress-bar-definicija-program-treci {
   position:absolute;
-  width: 380%;
+  width: 370%;
   height: 20px;
   margin: -25px auto;
-  margin-left:-1340px;
+  margin-left:-1280px;
   margin-right:0px;
   background: #fdfc98;
   border-radius: 10px;
   overflow: hidden;
-  margin-top:1100px;
+  margin-top:1200px;
 
   
   
@@ -296,15 +337,15 @@ html {
 .progress-bar-yoga {
 
   position:absolute;
-  width: 180%;
+  width: 150%;
   height: 20px;
   margin: -25px auto;
-  margin-left:-120px;
+  margin-left:200px;
   margin-right:0px;
   background: #fdfc98;
   border-radius: 10px;
   overflow: hidden;
-  margin-top:1260px;
+  margin-top:1220px;
 
 
   -webkit-transform: rotate(-270deg);
@@ -314,6 +355,49 @@ html {
 
 
 .progress-bar-yoga .progress {
+
+
+  content: "";
+  display: block;
+  position: absolute;
+  background: #a7e90c;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 25px;
+  transition: width 250ms ease-in-out;
+
+}
+
+
+
+
+
+/*------------------------
+  SNAGA PROGRESS BAR
+-------------------------*/
+
+.progress-bar-snaga {
+
+  position:absolute;
+  width: 280%;
+  height: 20px;
+  margin: -25px auto;
+  margin-left:-660px;
+  margin-right:0px;
+  background: #fdfc98;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top:620px;
+
+
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+
+}
+
+
+.progress-bar-snaga .progress {
 
 
   content: "";

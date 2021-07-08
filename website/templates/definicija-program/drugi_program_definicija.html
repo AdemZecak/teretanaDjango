@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+{% static "images" as baseUrl %}
 
 
 
 
 {% block content %}
+
+    
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="{% static 'website/img/breadcrumb-bg.jpg' %}">
@@ -24,7 +27,10 @@
         </div>
     </section>
     <!-- Breadcrumb Section End -->
+    
 
+    
+    
     <!-- Class Timetable Section Begin -->
     <section class="class-timetable-section spad">
         <div class="container">
@@ -38,6 +44,8 @@
                 
             </div>
 
+            
+    
             <!-- PONEDJELJAK -->
             <div class="row">
                 <div class="col-lg-12">
@@ -52,272 +60,69 @@
                                     <th >Serije</th>
                                     <th >Ponavljanja</th>
                                     <th ></th>
-                                </tr>
+                                   
                               
                             </thead>
                             <tbody>
                                 
+                                {% for i in ponedjeljak %}
                                 <tr>
-                                    <td class="class-time"></td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>Bench Press</h5>
-                                       
-                                        
-                                    </td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>4</h5>
-                                        
-                                        
-                                    </td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>12-15</h5>
-                                    
-                                        <td class="class-time"><div class="tasks">
-                                            <label class="checkbox">
-                                              <input type="checkbox">
-                                              <span class="checkmark"></span>
-                                            </label>
-                                        </div></td>
-                                        
-                                    </td>
 
-                                    <tr>
-                                        <td class="class-time"></td>
+                                    
+                                    
+                                        
+
+                                        <td class="class-time">
+
+                                            
+                                            <div class = "wrapper">
+                                                <div class = "btn">
+                                                    <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
+                                                </div>
+                                            </div>
+
+                                                                                
+                                        </td>
+                                        
                                         <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>Incline Bench Press</h5>
-                                           
+                                            <h5>{{i.vjezbe}}</h5>
+                                        
                                             
                                         </td>
                                         <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>3</h5>
-                                          
+                                            <h5>{{i.serije}}</h5>
+                                            
                                             
                                         </td>
                                         <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>12-15</h5>
-                                          
+                                            <h5>{{i.ponavljanja}}</h5>
+                                        
+                                            
+                                    
+                                        
                                             <td class="class-time">
                                                 <div class="tasks">
                                                     <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
                                                     </label>
                                                 </div>
                                             </td>
+                                            
                                         </td>
-
-                                        <tr>
-                                            <td class="class-time"></td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Decline Bench Press</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>3</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>12</h5>
-                                              
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Dumbell Fly</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>2</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>10-12</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                                
-                                            </tr>
-                                            
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Squat</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>4</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                                
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Leg Extension</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>2</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                                
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Stiff Leg Deadlift</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>10-12</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                                
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Leg Curl</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12</h5>
-                                                
-                                                    <td class="class-time"><div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div></td>
-                                                </td>
-                                                
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Standing Forward Bend</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>2</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>max</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                                
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Swiss Ball </h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>max</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                                
-                                            </tr>
-
-                                            
-                                        </tr>
-
-                                    </tr>
+                                        
+                                        
+                                    
+                                        
+                                                        
+                                     
+                                        
                                    
-                                   
+                                    
                                 </tr>
+                                {% endfor %}
+                        
+                            
                                 
                             </tbody>
                         </table>
@@ -327,10 +132,10 @@
         </div>
     </section>
 
-   
 
-
-    <!-- UTORAK -->
+    
+    
+    <!-- UTORAK-->
 
     <section class="class-timetable-section spad">
         <div class="container">
@@ -344,17 +149,20 @@
                                 <tr>
                                     
                                     <th >Utorak</th>
-                                    <th ></th>
+                                    <th >ODMOR</th>
                                     <th ></th>
                                     
-                                </tr>
                                    
                               
                             </thead>
                             <tbody>
 
-                                <td class="class-time">Aerobni trening kombinacija steper i orbitrack u trajanju 45 minuta, 2-3 sata nakon obroka.</td>
-                                 
+                                <td class="class-time"></td>
+                                <td class="class-time"></td>
+                                <td class="class-time"></td>
+
+
+                                
                             </tbody>
                         </table>
                     </div>
@@ -363,19 +171,18 @@
         </div>
     </section>
 
+    <!-- PROGRESS BAR -->
+  
 
-     <!--PROGRESS BAR-->
-
-     <div class="progress-bar-definicija-program-drugi">
-         <span class="progress"></span>
-     </div>
+    <div class="progress-bar-definicija-program-drugi">
+        <span class="progress"></span>
+    </div>
 
 
-    <!-- SRIJEDA-->
-
+    <!-- SRIJEDA -->
     <section class="class-timetable-section spad">
         <div class="container">
-           
+            
             <div class="row">
                 <div class="col-lg-12">
                     <div class="class-timetable">
@@ -395,215 +202,58 @@
                             </thead>
                             <tbody>
                                 
+                                {% for i in srijeda %}
+                                
+
                                 <tr>
-                                    <td class="class-time"></td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>Behind The Head Lat Pulldown</h5>
-                                                                            
+                                    <td class="class-time">
+                                        <div class = "wrapper">
+                                            <div class = "btn">
+                                                <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                        </div>
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>3</h5>
+                                        <h5>{{i.vjezbe}}</h5>
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>12-15</h5>
-                                    
+                                        <h5>{{i.serije}}</h5>
+                                        
+                                        
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>{{i.ponavljanja}}</h5>
+
+
+
+
+
+                                        
+                                        
                                         <td class="class-time">
+
                                             <div class="tasks">
                                                 <label class="checkbox">
                                                   <input type="checkbox">
                                                   <span class="checkmark"></span>
                                                 </label>
-                                            </div>
+                                            </div> 
+                                            
                                         </td>
+
+                                        
                                         
                                     </td>
-
-                                    <tr>
-                                        <td class="class-time"></td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>T - Bar Row</h5>
-                                      
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>3</h5>
-                                           
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>12-15</h5>
-                                        
-                                            <td class="class-time">
-                                                <div class="tasks">
-                                                    <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </td>
-                                    </tr>
-
+                                  
                                     
-
-                                    <tr>
-                                        <td class="class-time"></td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>Hyperextension</h5>
-                                                                                    
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>3</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>15</h5>
-                                          
-                                            <td class="class-time">
-                                                <div class="tasks">
-                                                    <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </td>
-
-                                        <tr>
-                                            <td class="class-time"></td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Preacher Dumbbell Curl</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>3</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>12-15</h5>
-                                              
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Dumbbell Hammer Curl</h5>
-                                              
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12-15</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Concentration Biceps Curl</h5>
-                                              
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Barbell Behind The Back Wrist Curl</h5>
-                                              
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12-15</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Calf Raise</h5>
-                                              
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>5</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>15-20</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>
-
-                                        </tr>
+                                        
+                                        
+                                 
                                    
                                 </tr>
+
+
+                                {% endfor %} 
                                 
                             </tbody>
                         </table>
@@ -612,10 +262,12 @@
             </div>
         </div>
     </section>
-    
-    <!--ČETVRTAK-->
 
-    <section class="class-timetable-section spad">
+    
+
+      <!-- ČETVRTAK-->
+
+      <section class="class-timetable-section spad">
         <div class="container">
            
             <div class="row">
@@ -630,7 +282,6 @@
                                     <th >ODMOR</th>
                                     <th ></th>
                                     
-                                </tr>
                                    
                               
                             </thead>
@@ -668,25 +319,37 @@
                                     <th >Serije</th>
                                     <th >Ponavljanja</th>
                                     <th ></th>
-                                </tr>
+                                   
                               
                             </thead>
                             <tbody>
                                 
+
+                                {% for i in petak %}
                                 <tr>
-                                    <td class="class-time"></td>
+                                    <td class="class-time">
+                                        <div class = "wrapper">
+                                            <div class = "btn">
+                                                <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>Dumbbell Bench Press</h5>
+                                        <h5>{{i.vjezbe}}</h5>
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>3</h5>
+                                        <h5>{{i.serije}}</h5>
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>12-15</h5>
+                                        <h5>{{i.ponavljanja}}</h5>
+
+
+
+                                        
                                     
                                         <td class="class-time">
                                             <div class="tasks">
@@ -699,260 +362,15 @@
                                         
                                     </td>
 
-                                    <tr>
-                                        <td class="class-time"></td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>Barbell Row</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>3</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>12-15</h5>
-                                          
-                                          
-                                            <td class="class-time">
-                                                <div class="tasks">
-                                                    <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </td>
 
-                                        <tr>
-                                            <td class="class-time"></td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Dumbbell Rear Delt Raise</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>3</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>12</h5>
-                                         
-                                              
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Dumbbell Shrug</h5>
-                                                
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>15</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Skull Crusher</h5>
-                                                
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12-15</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Triceps Extension</h5>
-                                                
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12-15</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Kick Back</h5>
-                                                
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>2</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>12-15</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Leg Raises</h5>
-                                                
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>max</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Crunches</h5>
-                                                
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>max</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Calf Raise</h5>
-                                                
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>5</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>15-20</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-
-                                            </tr>
-
-                                        </tr>
-
-                                    </tr>
+                                    
+                                    
                                    
                                    
                                 </tr>
+
+
+                                {% endfor %}
                                 
                             </tbody>
                         </table>
@@ -961,6 +379,7 @@
             </div>
         </div>
     </section>
+
     
     <!--Subota-->
 
@@ -976,17 +395,17 @@
                                 <tr>
                                     
                                     <th >Subota</th>
-                                    <th ></th>
+                                    <th >ODMOR</th>
                                     <th ></th>
                                     
-                                </tr>
                                    
                               
                             </thead>
                             <tbody>
 
-                                <td class="class-time">Aerobni trening, trčanje vani (meka podloga) u trajanju 45 minuta, ujutro prije doručka.</td>
-                                
+                                <td class="class-time"></td>
+                                <td class="class-time"></td>
+                                <td class="class-time"></td>
 
 
                                 
@@ -997,8 +416,9 @@
             </div>
         </div>
     </section>
-    
-    
+
+          
+
     <!--NEDJELJA-->
 
     <section class="class-timetable-section spad">
@@ -1016,7 +436,6 @@
                                     <th >ODMOR</th>
                                     <th ></th>
                                     
-                                </tr>
                                    
                               
                             </thead>
@@ -1034,11 +453,8 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
-    
-
+    </section>  
 
 
 {% endblock %}
+

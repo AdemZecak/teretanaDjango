@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% static "images" as baseUrl %}
+
+
 
 
 
 
 {% block content %}
+
+    
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="{% static 'website/img/breadcrumb-bg.jpg' %}">
@@ -24,7 +29,10 @@
         </div>
     </section>
     <!-- Breadcrumb Section End -->
+    
 
+    
+    
     <!-- Class Timetable Section Begin -->
     <section class="class-timetable-section spad">
         <div class="container">
@@ -38,6 +46,8 @@
                 
             </div>
 
+            
+    
             <!-- PONEDJELJAK -->
             <div class="row">
                 <div class="col-lg-12">
@@ -57,127 +67,64 @@
                             </thead>
                             <tbody>
                                 
+                                {% for i in ponedjeljak %}
                                 <tr>
-                                    <td class="class-time">
-                                        <div class = "wrapper">
-                                            <div class = "btn">
-                                                <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/pushupwalkout-1472133020.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>Walk Outs</h5>
-                                        
-                                        
-                                    </td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>3</h5>
-                                        
-                                        
-                                    </td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>5</h5>
-                                        <h5>(stojeći ili iz čučnja)</h5>
-                                    
-                                        <td class="class-time">
-                                            <div class="tasks">
-                                                <label class="checkbox">
-                                                  <input type="checkbox">
-                                                  <span class="checkmark"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                        
-                                    </td>
 
-                                    <tr>
-                                        <td class="class-time"></td>
+                                    
+                                    
+                                        
+
+                                        <td class="class-time">
+
+                                            
+                                            <div class = "wrapper">
+                                                <div class = "btn">
+                                                    <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
+                                                </div>
+                                            </div>
+
+                                                                                
+                                        </td>
+                                        
                                         <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>DB Crunch</h5>
-                                            <h5>(heavy dumbell)</h5>
+                                            <h5>{{i.vjezbe}}</h5>
+                                        
                                             
                                         </td>
                                         <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>3</h5>
-                                          
+                                            <h5>{{i.serije}}</h5>
+                                            
                                             
                                         </td>
                                         <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>10</h5>
-                                            <h5>(sa ispruženim rukama)</h5>
-                                          
+                                            <h5>{{i.ponavljanja}}</h5>
+                                        
+                                            
+                                    
+                                        
                                             <td class="class-time">
                                                 <div class="tasks">
                                                     <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
                                                     </label>
                                                 </div>
                                             </td>
+                                            
                                         </td>
-
-                                        <tr>
-                                            <td class="class-time">
-                                                <div class = "wrapper">
-                                                    <div class = "btn">
-                                                        <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/plank-1457045584.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Plank</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>3</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>1 minuta</h5>
-                                              
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Band Hold</h5>
-                                                    <h5>(kneeling)</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>max</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>
-
-                                        </tr>
-                                    </tr>
+                                        
+                                        
+                                    
+                                        
+                                                        
+                                     
+                                        
                                    
-                                   
+                                    
                                 </tr>
+                                {% endfor %}
+                        
+                            
                                 
                             </tbody>
                         </table>
@@ -186,10 +133,15 @@
             </div>
         </div>
     </section>
+
+    
+    
+    
+
+   
     
 
     <!-- UTORAK -->
-
     <section class="class-timetable-section spad">
         <div class="container">
             
@@ -206,141 +158,64 @@
                                     <th >Serije</th>
                                     <th >Ponavljanja</th>
                                     <th ></th>
-                                   
+                                
+                                </tr>
                               
                             </thead>
                             <tbody>
                                 
+                                {% for i in utorak %}
+                                
+
                                 <tr>
                                     <td class="class-time">
                                         <div class = "wrapper">
                                             <div class = "btn">
-                                                <a href="#" onClick="MyWindow=window.open('https://healthinindia.in/wp-content/uploads/2020/09/file-2.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                        </div>
-                                            </div>
-                                        </div>
+                                                <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                        </div>
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>DB Pullovers</h5>
-                                        <h5>+</h5>
-                                        <h5>Chrunch</h5>
-                                        <h5>On Swiss ball</h5>
+                                        <h5>{{i.vjezbe}}</h5>
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>5</h5>
+                                        <h5>{{i.serije}}</h5>
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>10</h5>
-                                    
+                                        <h5>{{i.ponavljanja}}</h5>
+
+
+
+
+
+                                        
+                                        
                                         <td class="class-time">
+
                                             <div class="tasks">
                                                 <label class="checkbox">
                                                   <input type="checkbox">
                                                   <span class="checkmark"></span>
                                                 </label>
-                                            </div>
+                                            </div> 
+                                            
                                         </td>
+
+                                        
                                         
                                     </td>
-
-                                    <tr>
+                                  
+                                    
                                         
-                                        <td class="class-time"></td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>Plate Arches</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>5</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>8</h5>
-                                            <h5>(Obje strane)</h5>
-                                          
-                                            <td class="class-time">
-                                                <div class="tasks">
-                                                    <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </td>
-                                        <tr>
-                                            <td class="class-time">
-                                                <div class = "wrapper">
-                                                    <div class = "btn">
-                                                        <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/sideplank-1456956829.gif','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                                    </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Side Bridge</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>5</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>30 sekundi</h5>
-                                                <h5>(prvih 10 sekundi</h5>
-                                                <h5>sa podignutom nogom)</h5>
-                                              
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time">
-                                                    <div class = "wrapper">
-                                                        <div class = "btn">
-                                                            <a href="#" onClick="MyWindow=window.open('https://thumbs.gfycat.com/FloweryInsignificantEland-max-1mb.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Side Bends</h5>
-                                                    <h5>(Dumbell)</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>5</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>10</h5>
-                                                    <h5>(Obje strane)</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>
-                                        </tr>
-                                    </tr>
+                                        
+                                 
                                    
                                 </tr>
+
+
+                                {% endfor %} 
                                 
                             </tbody>
                         </table>
@@ -349,6 +224,9 @@
             </div>
         </div>
     </section>
+
+
+    
     
     <!-- SRIJEDA-->
 
@@ -373,27 +251,29 @@
                             </thead>
                             <tbody>
                                 
+                                {% for i in srijeda %}
+                            
                                 <tr>
                                     <td class="class-time">
+
                                         <div class = "wrapper">
                                             <div class = "btn">
-                                                <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/deadbugoppositearmleg-1472146426.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                        </div>
-                                            </div>
-                                        </div>
+                                                <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>Dead Bug</h5>
-                                        
-                                        
-                                    </td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>3</h5>
+                                        <h5>{{i.vjezbe}}</h5>
+                                      
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>10 sekundi</h5>
-                                        <h5>(izdržaj)</h5>
+                                        <h5>{{i.serije}}</h5>
+                                        
+                                        
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>{{i.ponavljanja}}</h5>
+                                        
                                     
                                         <td class="class-time">
                                             <div class="tasks">
@@ -406,105 +286,12 @@
                                         
                                     </td>
 
-                                    <tr>
-                                        <td class="class-time">
-                                            <div class = "wrapper">
-                                                <div class = "btn">
-                                                    <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/supermany-1472154643.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                                </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>Y-Superman</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>3</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>10</h5>
-                                            <h5>(sa medicinskom loptom)</h5>
-                                           
-                                          
-                                            <td class="class-time">
-                                                <div class="tasks">
-                                                    <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </td>
-
-                                        <tr>
-                                            <td class="class-time"></td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Reverse Hyperextensions</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>3</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>10</h5>
-                                                <h5>(na bench klupi)</h5>
-                                                <h5>+</h5>
-                                                <h5>(svako ponavljanje</h5>
-                                                <h5>izdržaj 3 sekunde)</h5>
-                                                                                        
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time">
-                                                    <div class = "wrapper">
-                                                        <div class = "btn">
-                                                            <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/glutebridgedynamic-1472218237.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Glute Bridge</h5>
-                                                    <h5>(Dumbell)</h5>
-                                                  
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>10 sekundi</h5>
-                                                    <h5>(sa bučicama)</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>    
-                                        </tr>
-                                    </tr>           
+                                         
+                                   
+                                   
                                 </tr>
+
+                                {% endfor %}
                                 
                             </tbody>
                         </table>
@@ -515,18 +302,17 @@
     </section>
 
     <!-- PROGRESS BAR -->
+    <br>
 
     <div class="progress-bar-četvrti-core">
         <span class="progress"></span>
     </div>
-
 
     <!--ČETVRTAK-->
 
     <section class="class-timetable-section spad">
         <div class="container">
             
-        
             <div class="row">
                 <div class="col-lg-12">
                     <div class="class-timetable">
@@ -545,28 +331,29 @@
                             </thead>
                             <tbody>
                                 
+                                {% for i in cetvrtak %}
+                            
                                 <tr>
                                     <td class="class-time">
+
                                         <div class = "wrapper">
                                             <div class = "btn">
-                                                <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/pushupwalkout-1472133020.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
-                                            </div>
-                                        </div>
+                                                <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>Walk Outs</h5>
-                                       
-                                        
-                                    </td>
-                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>3</h5>
+                                        <h5>{{i.vjezbe}}</h5>
+                                      
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>5</h5>
-                                        <h5>(stojeći ili iz čučnja)</h5>
-                                       
+                                        <h5>{{i.serije}}</h5>
+                                        
+                                        
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>{{i.ponavljanja}}</h5>
+                                        
                                     
                                         <td class="class-time">
                                             <div class="tasks">
@@ -579,93 +366,13 @@
                                         
                                     </td>
 
-                                    <tr>
-                                        <td class="class-time"></td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>DB Crunch</h5>
-                                            <h5>(heavy dumbell)</h5>
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>3</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>20</h5>
-                                          
-                                            <td class="class-time">
-                                                <div class="tasks">
-                                                    <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </td>
-
-                                        <tr>
-                                            <td class="class-time">
-                                                <div class = "wrapper">
-                                                    <div class = "btn">
-                                                        <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/plank-1457045584.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Plank</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>3</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>1 minuta</h5>
-                                              
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time"></td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Band Hold</h5>
-                                                    <h5>(kneeling)</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>max</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>
-
-                                        </tr>
-                                    </tr>
+                                         
                                    
                                    
                                 </tr>
+
+
+                                {% endfor %}
                                 
                             </tbody>
                         </table>
@@ -674,6 +381,7 @@
             </div>
         </div>
     </section>
+
 
     <!--PETAK-->
 
@@ -698,29 +406,32 @@
                             </thead>
                             <tbody>
                                 
+
+                                {% for i in petak %}
                                 <tr>
                                     <td class="class-time">
                                         <div class = "wrapper">
                                             <div class = "btn">
-                                                <a href="#" onClick="MyWindow=window.open('https://healthinindia.in/wp-content/uploads/2020/09/file-2.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                        </div>
+                                                <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>DB Pullovers</h5>
-                                        <h5>+</h5>
-                                        <h5>Chrunch</h5>
-                                        <h5>On Swiss ball</h5>
+                                        <h5>{{i.vjezbe}}</h5>
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>5</h5>
+                                        <h5>{{i.serije}}</h5>
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>10</h5>
+                                        <h5>{{i.ponavljanja}}</h5>
+
+
+
+                                        
                                     
                                         <td class="class-time">
                                             <div class="tasks">
@@ -733,101 +444,15 @@
                                         
                                     </td>
 
-                                    <tr>
-                                        <td class="class-time"></td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>Plate Arches</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>5</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>8</h5>
-                                            <h5>(Obje strane)</h5>
-                                          
-                                            <td class="class-time">
-                                                <div class="tasks">
-                                                    <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </td>
 
-                                        <tr>
-                                            <td class="class-time">
-                                                <div class = "wrapper">
-                                                    <div class = "btn">
-                                                        <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/sideplank-1456956829.gif','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                                    </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Side Bridge</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>5</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>30 sekundi</h5>
-                                                <h5>(prvih 10 sekundi</h5>
-                                                <h5>sa podignutom nogom)</h5>
-                                              
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time">
-                                                    <div class = "wrapper">
-                                                        <div class = "btn">
-                                                            <a href="#" onClick="MyWindow=window.open('https://thumbs.gfycat.com/FloweryInsignificantEland-max-1mb.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Side Bends</h5>
-                                                    <h5>(Dumbell)</h5>
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>5</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>10</h5>
-                                                    <h5>(Obje strane)</h5>
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>
-                                        </tr>
-                                    </tr>
+                                    
+                                    
+                                   
                                    
                                 </tr>
+
+
+                                {% endfor %}
                                 
                             </tbody>
                         </table>
@@ -836,6 +461,7 @@
             </div>
         </div>
     </section>
+
     
     <!--Subota-->
 
@@ -860,27 +486,35 @@
                             </thead>
                             <tbody>
                                 
+                                
                                 <tr>
+
+
+                                    {% for i in subota %}
+
                                     <td class="class-time">
                                         <div class = "wrapper">
                                             <div class = "btn">
-                                                <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/deadbugoppositearmleg-1472146426.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                        </div>
-                                            </div>
+                                                <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
                                         </div>
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>Dead Bugs</h5>
+                                        <h5>{{i.vjezbe}}</h5>
+                                    
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>3</h5>
+                                        <h5>{{i.serije}}</h5>
                                         
                                         
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                        <h5>10 sekundi</h5>
-                                        <h5>(izdržaj)</h5>
+                                        <h5>{{i.ponavljanja}}</h5>
+
+
+                                        
+                                     
                                     
                                         <td class="class-time">
                                             <div class="tasks">
@@ -893,114 +527,23 @@
                                         
                                     </td>
 
-                                    <tr>
-                                        <td class="class-time">
-                                            <div class = "wrapper">
-                                                <div class = "btn">
-                                                    <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/supermany-1472154643.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                                </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>Y-Superman</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>3</h5>
-                                          
-                                            
-                                        </td>
-                                        <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                            <h5>10</h5>
-                                            <h5>(sa pločom)</h5>
-                                           
-                                          
-                                            <td class="class-time">
-                                                <div class="tasks">
-                                                    <label class="checkbox">
-                                                      <input type="checkbox">
-                                                      <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </td>
-
-                                        <tr>
-                                            <td class="class-time"></td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>Reverse Hyperextensions</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>3</h5>
-                                                
-                                                
-                                            </td>
-                                            <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                <h5>10</h5>
-                                                <h5>(na bench klupi)</h5>
-                                                <h5>+</h5>
-                                                <h5>(svako ponavljanje</h5>
-                                                <h5>izdržaj 3 sekunde)</h5>
-                                                                                        
-                                                <td class="class-time">
-                                                    <div class="tasks">
-                                                        <label class="checkbox">
-                                                          <input type="checkbox">
-                                                          <span class="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </td>
-
-                                            <tr>
-                                                <td class="class-time">
-                                                    <div class = "wrapper">
-                                                        <div class = "btn">
-                                                            <a href="#" onClick="MyWindow=window.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/08/glutebridgedynamic-1472218237.gif ','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>Glute Bridge</h5>
-                                                    <h5>(Dumbell)</h5>
-                                                  
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>3</h5>
-                                                   
-                                                    
-                                                </td>
-                                                <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
-                                                    <h5>10 sekundi</h5>
-                                                    <h5>(sa bučicama)</h5>
-                                                
-                                                
-                                                    <td class="class-time">
-                                                        <div class="tasks">
-                                                            <label class="checkbox">
-                                                              <input type="checkbox">
-                                                              <span class="checkmark"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                </td>
-                                            </tr>    
-                                        </tr>
-                                    </tr>           
+                                    
+                                   
                                 </tr>
-                                
+
+                                {% endfor %}
+                            
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+        
     </section>
-    
+
+          
+
     <!--NEDJELJA-->
 
     <section class="class-timetable-section spad">
@@ -1035,11 +578,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
-    
-
+    </section>  
 
 
 {% endblock %}
