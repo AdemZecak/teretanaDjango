@@ -1,8 +1,11 @@
 from django.urls import path
-from . import views 
+from . import views
+import website 
+
+
 
 urlpatterns = [
-    path('',views.index, name = "index"),
+    
     path('contact.html',views.contact, name = "contact"),
     path('about-us.html',views.about, name = "about-us"),
     path('blog.html',views.blog, name = "blog"),
@@ -33,6 +36,20 @@ urlpatterns = [
     #yoga
 
     path('yoga.html',views.yoga, name = "yoga"),
-    path('program_yoga.html',views.program_yoga, name = "program_yoga")
+    path('program_yoga.html',views.program_yoga, name = "program_yoga"),
+
+
+
+
+    #plaćanje checkout
+
+    path('simple-checkout.html',views.simpleCheckout, name = "simple-checkout"),
+    
+    path('',views.index, name = "index"),
+
+
+    
+    path('checkout/<int:pk>/', views.checkout, name="checkout"), 
+    path('complete/', views.paymentComplete, name="complete"),
 
 ]

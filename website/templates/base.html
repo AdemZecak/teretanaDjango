@@ -38,6 +38,8 @@
     <link rel="stylesheet" href="{% static 'website/css/checkbox.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'website/css/play-btn.css' %}" type="text/css">
 
+
+
     
 
 
@@ -189,8 +191,7 @@
                     <div class="fa-logo">
                         <a href="#"><img src="{% static 'website/img/logo.png' %}" alt=""></a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore dolore magna aliqua endisse ultrices gravida lorem.</p>
+                    <p>Pravi izbor za potpunu transformaciju. Treninzi kreirani od strane profesionalaca. Ostvarite ciljeve uz personaliziran trening prilagođen i kreiran samo za Vas!</p>
                     <div class="fa-social">
                         <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
                         <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -204,22 +205,18 @@
                 <div class="fs-widget">
                     <h4>Useful links</h4>
                     <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Classes</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{% url 'about-us' %} ">O nama</a></li>
+                        <li><a href="{% url 'blog' %} ">Blog</a></li>
+                        <li><a href="{% url 'services' %} ">Usluge</a></li>
+                        <li><a href="{% url 'contact' %} ">Kontakt</a></li>
+                        <li><a href="{% url 'login' %} ">Login</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-6">
                 <div class="fs-widget">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">My account</a></li>
-                        <li><a href="#">Subscribe</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                  
+                    
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">

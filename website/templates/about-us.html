@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} About us {% endblock %}
+{% block title %} O nama {% endblock %}
 
 {% block content %}
 
@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb-text">
-                    <h2 class = "test">About us</h2>
+                    <h2 class = "test">O nama</h2>
                     <div class="bt-option">
-                        <a href="{% url 'index' %}">Home</a>
-                        <span>About</span>
+                        <a href="{% url 'index' %}">Naslovna</a>
+                        <span>O nama</span>
                     </div>
                 </div>
             </div>
@@ -31,8 +31,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <span>Why chose us?</span>
-                    <h2>PUSH YOUR LIMITS FORWARD</h2>
+                    <span>Zašto baš mi?</span>
+                    <h2>POMJERITE SVOJE GRANICE</h2>
                 </div>
             </div>
         </div>
@@ -40,33 +40,29 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="cs-item">
                     <span class="flaticon-034-stationary-bike"></span>
-                    <h4>Modern equipment</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        dolore facilisis.</p>
+                    <h4>Moderna oprema</h4>
+                    <p>Vježbe usklađene po najmodernijim standardima.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="cs-item">
                     <span class="flaticon-033-juice"></span>
-                    <h4>Healthy nutrition plan</h4>
-                    <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-                        facilisis.</p>
+                    <h4>Plan ishrane</h4>
+                    <p>Ishrana predstavlja najbitniju komponentu zdravog načina života, te samo adekvatan i Vama prilagođen plan ishrane Vas može dovesti do željenog cilja.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="cs-item">
                     <span class="flaticon-002-dumbell"></span>
-                    <h4>Proffesponal training plan</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        dolore facilisis.</p>
+                    <h4>Profesionalan plan treninga</h4>
+                    <p>Izaberite specijalno definisan trening adekvatan za Vašu tjelesnu građu.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="cs-item">
                     <span class="flaticon-014-heart-beat"></span>
-                    <h4>Unique to your needs</h4>
-                    <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-                        facilisis.</p>
+                    <h4>Unikatan pristup</h4>
+                    <p>Zajedno sa nama možete probiti sve svoje barijere, izvući maksimum iz svog tijela i postati najbolja verzija sebe. U radu sa klijentima pristupamo holistički, trening i plan ishrane prilagođavamo Vašem načinu života i zdravstvenom stanju. Naš program – Vaši rezultati.</p>
                 </div>
             </div>
         </div>
@@ -87,14 +83,13 @@
             <div class="col-lg-6 p-0">
                 <div class="about-text">
                     <div class="section-title">
-                        <span>About Us</span>
-                        <h2>What we have done</h2>
+                        <span>O nama</span>
+                        <h2>Šta nudimo?</h2>
                     </div>
                     <div class="at-desc">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                            viverra maecenas accumsan lacus vel facilisis. aliquip ex ea commodo consequat sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <p>Kreirali smo metode za zdrav način življenja i vježbanja za rekreativce, vrhunske sportiste i profesionalce. Trening programi koji će vas motivisati da ne odustajete od svojih ciljeva.
+                            Praćenje napretka i mogućnost korištenja svih dostupnih trening programa. Mogućnost gledanja svake vježbe prije izvođenja.
+                        </p>
                     </div>
                     <div class="about-bar">
                         <div class="ab-item">
@@ -107,7 +102,7 @@
                             </div>
                         </div>
                         <div class="ab-item">
-                            <p>Training</p>
+                            <p>Yoga</p>
                             <div id="bar2" class="barfiller">
                                 <span class="fill" data-percentage="85"></span>
                                 <div class="tipWrap">
@@ -124,6 +119,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        
                     </div>
                 </div>
             </div>
@@ -139,10 +136,10 @@
             <div class="col-lg-12">
                 <div class="team-title">
                     <div class="section-title">
-                        <span>Our Team</span>
-                        <h2>TRAIN WITH EXPERTS</h2>
+                        <span>Naš tim</span>
+                        <h2>Trenirajte sa ekspertima</h2>
                     </div>
-                    <a href="#" class="primary-btn btn-normal appoinment-btn">appointment</a>
+                    <a href="{% url 'index' %}" class="primary-btn btn-normal appoinment-btn">Aktiviraj članstvo</a>
                 </div>
             </div>
         </div>
@@ -151,48 +148,33 @@
                 <div class="col-lg-4">
                     <div class="ts-item set-bg" data-setbg="{% static 'website/img/team/team-1.jpg' %}">
                         <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
+                            <h4>Natalie Portman</h4>
+                            <span>Yoga trener</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="ts-item set-bg" data-setbg="{% static 'website/img/team/team-2.jpg' %}">
                         <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
+                            <h4>Geoffrey Kondogbia</h4>
+                            <span>Trener</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="ts-item set-bg" data-setbg="{% static 'website/img/team/team-3.jpg' %}">
                         <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
+                            <h4>Marco Reus</h4>
+                            <span>Trener</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="{% static 'website/img/team/team-4.jpg' %}">
-                        <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="{% static 'website/img/team/team-5.jpg' %}">
-                        <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="col-lg-4">
                     <div class="ts-item set-bg" data-setbg="{% static 'website/img/team/team-6.jpg' %}">
                         <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
+                            <h4>Jessica Alba</h4>
+                            <span>Yoga</span>
                         </div>
                     </div>
                 </div>
@@ -208,9 +190,9 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="bs-text">
-                    <h2>registration now to get more deals</h2>
-                    <div class="bt-tips">Where health, beauty and fitness meet.</div>
-                    <a href="#" class="primary-btn  btn-normal">Appointment</a>
+                    <h2>Registrujte se za više detalja</h2>
+                    <div class="bt-tips">ZDRAVLJE I DOBAR IZGLED UVIJEK NA PRVOM MJESTU.</div>
+                    <a href="{% url 'register' %}" class="primary-btn  btn-normal">Registrujte se</a>
                 </div>
             </div>
         </div>
@@ -224,7 +206,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <span>Testimonial</span>
+                    <span>Iskustva</span>
                     <h2>Our cilent say</h2>
                 </div>
             </div>
@@ -237,10 +219,9 @@
                             <img src="{% static 'website/img/testimonial/testimonial-1.jpg' %}" alt="">
                         </div>
                         <div class="ti_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt<br /> ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                gravida. Risus commodo<br /> viverra maecenas accumsan lacus vel facilisis.</p>
-                            <h5>Marshmello Gomez</h5>
+                            <p>Programi koje koristim u potpunosti su promijenili moje navike.<br /> puno bolje se osjećam. Moje prehrambene navike 
+                                su se promijenile. Živim potpuno <br /> novi život.</p>
+                            <h5>Lana</h5>
                             <div class="tt-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -259,10 +240,9 @@
                             <img src="{% static 'website/img/testimonial/testimonial-2.jpg' %}" alt="">
                         </div>
                         <div class="ti_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt<br /> ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                gravida. Risus commodo<br /> viverra maecenas accumsan lacus vel facilisis.</p>
-                            <h5>Marshmello Gomez</h5>
+                            <p>Stekla sam sasvim nove poglede na vježbanje.<br /> Nisam imala naviku da redovno vježbam
+                                ali sam uz programe naučila <br /> spontano da se organizujem. </p>
+                            <h5>Una</h5>
                             <div class="tt-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>

@@ -3,12 +3,18 @@ from django.shortcuts import render
 from .models import Cetvrti_program_cetvrtak, Cetvrti_program_petak, Cetvrti_program_ponedjeljak, Cetvrti_program_srijeda, Cetvrti_program_subota, Cetvrti_program_utorak, Drugi_program_cetvrtak, Drugi_program_petak, Drugi_program_ponedjeljak, Drugi_program_srijeda, Drugi_program_subota, Drugi_program_utorak, Misicna_definicija2_petak, Misicna_definicija2_ponedjeljak, Misicna_definicija3_nedjelja, Misicna_definicija3_petak, Misicna_definicija3_ponedjeljak, Misicna_definicija_petak, Misicna_definicija_ponedjeljak, Misicna_definicija_srijeda, Misicna_definicija_srijeda2, Misicna_definicija_srijeda3, Placanje, Program_mass2_cetvrtak, Program_mass2_petak, Program_mass2_ponedjeljak, Program_mass2_utorak, Program_mass_cetvrtak, Program_mass_petak, Program_mass_ponedjeljak, Program_mass_utorak, Program_snaga_petak, Program_snaga_ponedjeljak, Program_snaga_srijeda, Program_yoga, Prvi_program_cetvrtak, Prvi_program_petak, Prvi_program_ponedjeljak, Prvi_program_srijeda, Prvi_program_subota, Prvi_program_utorak, Treci_program_cetvrtak, Treci_program_petak, Treci_program_ponedjeljak, Treci_program_srijeda, Treci_program_subota, Treci_program_utorak
 
 
+
+
+#dio za paypal
+from django.http import JsonResponse
+import json
+
+##############
+
+
+
 #glavni linkovi iz navbara
 #opcija za plaćanje
-def index(request):
-    
-    placanje = Placanje.objects.all()
-    return render(request, 'index.html', {'placanje': placanje})
 
 
 
@@ -216,7 +222,33 @@ def program_yoga(request):
 
 
 
-#plaćanje
+#plaćanje (paypal)
 
 
+def simpleCheckout(request):
+	return render(request, 'simple-checkout.html')
 
+
+def index(request):
+    
+    placanje = Placanje.objects.all()
+    return render(request, 'index.html', {'placanje': placanje})
+
+
+def checkout(request, pk):
+	product= Placanje.objects.get(id=pk)
+	context = {'product': product}
+	return render(request, 'checkout.html', context)
+
+def paymentComplete(request):
+	body = json.loads(request.body)
+	print('BODY:', body)
+	return JsonResponse('Payment completed!', safe=False)
+
+
+'''
+    product = Placanje.objects.get(id=body['productId'])
+    Order.objects.create(
+        product = product
+    )
+    '''

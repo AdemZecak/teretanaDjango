@@ -943,6 +943,15 @@ class Placanje(models.Model):
 
     class Meta:
         verbose_name_plural = "Placanje"
+
+
+
+class Order(models.Model):
+	product = models.ForeignKey(Placanje, max_length=200, null=True, blank=True, on_delete = models.SET_NULL)
+	created =  models.DateTimeField(auto_now_add=True) 
+
+	def __str__(self):
+		return self.product.name
     
     
 
