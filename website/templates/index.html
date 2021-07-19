@@ -117,6 +117,7 @@
                         <div class="ci-text">
                             <span>PROGRAM TRENINGA</span>
                             <h5>Povećanje mišićne mase</h5>
+                            
                             <a href="{% url 'mass_gain' %}"><i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -170,7 +171,7 @@
                     <div class="bs-text">
                         
                         
-
+                        
                         {% if user.is_authenticated %}
                         <div class = "hello_user"> <h2>DOBRODOŠLI, {{user.first_name}} !</h2> </div>
                         <a href = "accounts/logout" class = "primary-btn  btn-normal">Odjavite se</a>

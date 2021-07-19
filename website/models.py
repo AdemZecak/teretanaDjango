@@ -1,4 +1,9 @@
+from django.contrib.auth.models import User
 from django.db import models 
+from django.contrib.auth.models import User 
+#session
+
+
 
 #trbušni zid 
 
@@ -10,12 +15,14 @@ class Prvi_program_ponedjeljak(models.Model):
     vjezbe = models.CharField(max_length=200)
     serije = models.IntegerField()
     ponavljanja = models.CharField(max_length=300)
+    completed = models.BooleanField(default=False)
 
     def __str__(self):
    
         return self.vjezbe
         return self.serije 
         return self.ponavljanja
+        return self.completed
 
 
     class Meta:

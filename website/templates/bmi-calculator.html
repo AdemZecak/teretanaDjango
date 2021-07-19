@@ -11,11 +11,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb-text">
-                        <h2>BMI calculator</h2>
+                        <h2>BMI kalkulator</h2>
                         <div class="bt-option">
-                            <a href="{% url 'index' %}">Home</a>
-                            <a href="#">Pages</a>
-                            <span>BMI calculator</span>
+                            <a href="{% url 'index' %}">Naslovna</a>
+                            <span>BMI kalkulator</span>
                         </div>
                     </div>
                 </div>
@@ -30,33 +29,33 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title chart-title">
-                        <span>check your body</span>
-                        <h2>BMI CALCULATOR CHART</h2>
+                        <span>Index tjelesne mase</span>
+                        <h2>BMI Tabela</h2>
                     </div>
                     <div class="chart-table">
                         <table>
                             <thead>
                                 <tr>
                                     <th>Bmi</th>
-                                    <th>WEIGHT STATUS</th>
+                                    <th>Vaš status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class="point">Below 18.5</td>
-                                    <td>Underweight</td>
+                                    <td>Pothranjeni ste.</td>
                                 </tr>
                                 <tr>
                                     <td class="point">18.5 - 24.9</td>
-                                    <td>Healthy</td>
+                                    <td>Imate normalnu tjelesnu težinu.</td>
                                 </tr>
                                 <tr>
                                     <td class="point">25.0 - 29.9</td>
-                                    <td>Overweight</td>
+                                    <td>Imate povišenu tjelesnu težinu.</td>
                                 </tr>
                                 <tr>
-                                    <td class="point">30.0 - and Above</td>
-                                    <td>Obese</td>
+                                    <td class="point">30.0 - i iznad</td>
+                                    <td>Spadate u skupinu gojaznih osoba</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -64,30 +63,29 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="section-title chart-calculate-title">
-                        <span>check your body</span>
-                        <h2>CALCULATE YOUR BMI</h2>
+                        <span>Index tjelesne mase</span>
+                        <h2>Izračunajte Vaš BMI</h2>
                     </div>
                     <div class="chart-calculate-form">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                            viverra maecenas accumsan lacus vel facilisis.</p>
-                        <form action="#">
+                        <p>Vaš body mass index iznosi: {{result}}</p>
+                        <form action="racun">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <input type="text" placeholder="Height / cm">
+                                    <input type="text" placeholder="Visina / cm" name = "num1">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" placeholder="Weight / kg">
+                                    <input type="text" placeholder="Težina / kg" name = "num2">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" placeholder="Age">
+                                    <input type="text" placeholder="Godine" name = "godine">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" placeholder="Sex">
+                                    <input type="text" placeholder="Spol" name = "spol">
                                 </div>
                                 <div class="col-lg-12">
-                                    <button type="submit">Calculate</button>
+                                    <button type="submit">Izračunaj</button>
                                 </div>
+                                
                             </div>
                         </form>
                     </div>

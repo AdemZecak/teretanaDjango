@@ -38,9 +38,7 @@
     <link rel="stylesheet" href="{% static 'website/css/checkbox.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'website/css/play-btn.css' %}" type="text/css">
 
-
-
-    
+   
 
 
   
@@ -108,23 +106,14 @@
                             <li class= " active_nav {% if request.path == index %} active {% endif %}"><a href=" {% url 'index' %} ">Naslovna</a></li>
                             <li class="active_nav {% if request.path == about %} active {% endif %}"><a href="{% url 'about-us' %}">O nama</a></li>
                             <li class=" active_nav {% if request.path == services %} active {% endif %}"><a href="{% url 'services' %}">Usluge</a></li>
-                            <li class="active_nav {% if request.path == blog %} active {% endif %}"><a href="{% url 'blog' %}">Blog</a></li>
-                            <li><a href="#">Stranice</a>
-                                <ul class="dropdown">
-                                    <li><a href="{% url 'about-us' %}">O nama</a></li>                               
-                                    <li><a href="{% url 'bmi-calculator' %}">Bmi kalkulator</a></li>
-                                    <li><a href="{% url 'blog' %}">Blog</a></li>
-                                </ul>
-                            </li>
+                            <li class="active_nav {% if request.path == blog %} active {% endif %}"><a href="{% url 'bmi-calculator' %}">Bmi kalkulator</a></li>                            
                             <li class = "active_nav {% if request.path == contact %} active {% endif %}"><a href="{% url 'contact' %}">Kontakt</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
                     <div class="top-option">
-                        <div class="to-search search-switch">
-                            <i class="fa fa-search"></i>
-                        </div>
+                        
                         <div class="to-social">
                             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -203,49 +192,42 @@
             </div>
             <div class="col-lg-2 col-md-3 col-sm-6">
                 <div class="fs-widget">
-                    <h4>Useful links</h4>
+                    <h4>Korisni linkovi</h4>
                     <ul>
                         <li><a href="{% url 'about-us' %} ">O nama</a></li>
-                        <li><a href="{% url 'blog' %} ">Blog</a></li>
-                        <li><a href="{% url 'services' %} ">Usluge</a></li>
                         <li><a href="{% url 'contact' %} ">Kontakt</a></li>
+                        <li><a href="{% url 'services' %} ">Usluge</a></li>
                         <li><a href="{% url 'login' %} ">Login</a></li>
+                        <li><a href="{% url 'register' %} ">Registrujte se</a></li>
+                
                     </ul>
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-6">
                 <div class="fs-widget">
-                  
+                    
                     
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="fs-widget">
-                    <h4>Tips & Guides</h4>
-                    <div class="fw-recent">
-                        <h6><a href="#">Physical fitness may help prevent depression, anxiety</a></h6>
-                        <ul>
-                            <li>3 min read</li>
-                            <li>20 Comment</li>
-                        </ul>
-                    </div>
-                    <div class="fw-recent">
-                        <h6><a href="#">Fitness: The best exercise to lose belly fat and tone up...</a></h6>
-                        <ul>
-                            <li>3 min read</li>
-                            <li>20 Comment</li>
-                        </ul>
-                    </div>
+                    
+                    <h4>Sponzori</h4>
+                    <ul>
+                     
+                  
+                        <li><a href="https://body.ba/ " target="_blank">Body.ba</a></li>
+                        <li><a href="https://www.sportvision.ba/" target="_blank">SportVision.ba</a></li>
+                        <li><a href="https://www.bbicentar.ba/bh/" target="_blank">BBICentar.ba</a></li>
+                        <li><a href="https://www.tvornicazdravehrane.com/" target="_blank">Tvornica Zdrave Hrane</a></li>
+                    </ul>
+                      
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <div class="copyright-text">
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                </div>
+                
             </div>
         </div>
     </div>

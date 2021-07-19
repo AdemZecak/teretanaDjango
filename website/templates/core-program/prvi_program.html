@@ -66,11 +66,14 @@
                               
                             </thead>
                             <tbody>
-                                
+                    
                                 {% for i in ponedjeljak %}
+
+                                
+
                                 <tr>
 
-                                    
+                                   
                                     
                                         
 
@@ -98,33 +101,39 @@
                                         </td>
                                         <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
                                             <h5>{{i.ponavljanja}}</h5>
-                                        
+                                
                                             
-                                    
+                                            
+                                        
                                         
                                             <td class="class-time">
                                                 <div class="tasks">
                                                     <label class="checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark"></span>
+                                                    <form method = "POST">
+                                                        
+                                                        {% csrf_token %}
+                                                        <input type="checkbox" >
+                                                        
+                                                        <span class="checkmark"></span>
+                                                    </form>
                                                     </label>
                                                 </div>
                                             </td>
+
+                                        
+                                            {% endfor %} 
+
+                                        
+
                                             
                                         </td>
                                         
-                                        
-                                    
-                                        
-                                                        
-                                     
-                                        
-                                   
+                                                                               
                                     
                                 </tr>
-                                {% endfor %}
-                        
-                            
+                                
+                               
+                          
                                 
                             </tbody>
                         </table>
@@ -135,7 +144,11 @@
     </section>
 
     
-    
+   
+
+ 
+
+
     
 
    
@@ -496,6 +509,7 @@
                                         <div class = "wrapper">
                                             <div class = "btn">
                                                 <a href="#" onClick="MyWindow=window.open('{{i.gif.url}}','MyWindow','width=1400,height=600,position=relative' ); return false;"><button type = "button">POKRENI</button></a>
+                                            </div>
                                         </div>
                                     </td>
                                     <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
@@ -560,8 +574,11 @@
                                     <th >Nedjelja</th>
                                     <th >ODMOR</th>
                                     <th ></th>
+                                    <th ></th>
+                                    <th ></th>
                                     
-                                   
+                                    
+                                </tr>
                               
                             </thead>
                             <tbody>
@@ -569,6 +586,14 @@
                                 <td class="class-time"></td>
                                 <td class="class-time"></td>
                                 <td class="class-time"></td>
+                                <td class="class-time"></td>
+                                <td class="class-time">
+                                    <div class = "btn">
+                                        <a href="{% url 'drugi_program' %}"><button type = "button">DALJE</button></a>
+                                    </div>
+                                </td>
+                               
+                                
 
 
                                 
@@ -579,6 +604,6 @@
             </div>
         </div>
     </section>  
-
+    
 
 {% endblock %}

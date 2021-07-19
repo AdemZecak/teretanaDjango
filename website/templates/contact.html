@@ -12,11 +12,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb-text">
-                        <h2>Contact Us</h2>
+                        <h2>Kontaktirajte nas</h2>
                         <div class="bt-option">
-                            <a href="{% url 'index' %}">Home</a>
-                            <a href="#">Pages</a>
-                            <span>Contact us</span>
+                            <a href="{% url 'index' %}">Naslovna</a>
+                            <span>Kontaktirajte nas</span>
                         </div>
                     </div>
                 </div>
@@ -24,20 +23,35 @@
         </div>
     </section>
     <!-- Breadcrumb Section End -->
-
+    
+ 
     <!-- Contact Section Begin -->
     <section class="contact-section spad">
+        {% if ime %}
+        <div class = "hello_user">
+        <center>
+            <h2 style="color:rgb(255, 255, 255);">Hvala, {{ime}}!</h2>
+            <h3 style="color:rgb(255, 255, 255);">Primili smo Vašu poruku i odgovorićemo u što kraćem roku.</h3>
+        </center>
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        {% else %}
         <div class="container">
+            
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title contact-title">
-                        <span>Contact Us</span>
-                        <h2>GET IN TOUCH</h2>
+                        
+                        <span>Kontaktirajte nas</span>
+                        <h2>Pišite nam</h2>
                     </div>
                     <div class="contact-widget">
                         <div class="cw-text">
                             <i class="fa fa-map-marker"></i>
-                            <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                            <p>Sarajevo Zmaja od Bosne <br>71000</p>
                         </div>
                         <div class="cw-text">
                             <i class="fa fa-mobile"></i>
@@ -54,23 +68,27 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="leave-comment">
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Website">
-                            <textarea placeholder="Comment"></textarea>
-                            <button type="submit">Submit</button>
+                        <form action="{% url 'contact' %}" method = "POST">
+                            {% csrf_token %}
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            
+                            <input type="text" placeholder="Ime" name = "ime">
+                            <input type="text" placeholder="Email" name = "email">
+                            <textarea placeholder="Komentar" name = "komentar"></textarea>
+                            <button type="submit">Potvrdi</button>
+                            
                         </form>
                     </div>
                 </div>
             </div>
             <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12087.069761554938!2d-74.2175599360452!3d40.767139456514954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c254b5958982c3%3A0xb6ab3931055a2612!2sEast%20Orange%2C%20NJ%2C%20USA!5e0!3m2!1sen!2sbd!4v1581710470843!5m2!1sen!2sbd"
-                    height="550" style="border:0;" allowfullscreen=""></iframe>
-            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5754.170281503878!2d18.388189932600188!3d43.8540639474376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c9187ee083af%3A0xc8dbb845991a5df6!2sZmaja%20od%20Bosne%2C%20Sarajevo%2071000!5e0!3m2!1shr!2sba!4v1626623702504!5m2!1shr!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>            </div>
         </div>
     </section>
+    {% endif %}
     <!-- Contact Section End -->
 
     {% endblock %}

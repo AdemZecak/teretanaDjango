@@ -5,13 +5,28 @@ import website
 
 
 urlpatterns = [
+
+    #BMI
+    path('bmi-calculator.html',views.bmi, name = "bmi-calculator"),
+    path('racun',views.racun, name = "racun"),
+    ######
+
+
+    #checkbox save btn
+
+    path('cross_off/<list_id>',views.cross_off,name = "cross_off"),
+    path('uncross/<list_id>',views.uncross,name = "uncross"),
+    path('edit/<list_id>',views.edit,name="edit"),
+    #################
     
     path('contact.html',views.contact, name = "contact"),
     path('about-us.html',views.about, name = "about-us"),
     path('blog.html',views.blog, name = "blog"),
     path('services.html',views.services, name = "services"),
+
+    #LOGIN I REGISTRACIJA
+    path('login-registracija.html',views.loginRegistracija, name = "loginRegistracija"),
     
-    path('bmi-calculator.html',views.bmi, name = "bmi-calculator"),
     #vjezbe za trbuh
     path('core.html',views.core, name = "core" ),
     path('prvi_program.html',views.prvi,name = "prvi_program"),
@@ -51,5 +66,11 @@ urlpatterns = [
     
     path('checkout/<int:pk>/', views.checkout, name="checkout"), 
     path('complete/', views.paymentComplete, name="complete"),
+
+  
+
+    
+
+    
 
 ]
